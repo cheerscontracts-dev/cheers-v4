@@ -299,8 +299,8 @@ app.post('/generate-pdf', async (req, res) => {
     const mainPages = await mergedPdf.copyPages(mainPdfDoc, mainPdfDoc.getPageIndices());
     mainPages.forEach(page => mergedPdf.addPage(page));
 
-    if (attachments.length > 0) {
-      for (const attachmentUrl of attachments) {
+    if (attachments && attachments.length > 0) {
+      for (const attachmentUrl of attachments.filter(a => a)) {
         try {
           const pdfBuffer = await fetchPDFBuffer(attachmentUrl);
           const attachmentPdf = await PDFDocument.load(pdfBuffer);
