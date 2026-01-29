@@ -133,11 +133,13 @@ app.post('/generate-pdf', async (req, res) => {
       attachments = [],
       type = 'normal',
       offerLetter,
-      acceptanceLetter 
+      acceptanceLetter,
+      fileName
     } = req.body;
 
     console.log('Received type:', type);
-
+      
+    const safeFileName = (fileName || 'output.pdf').replace(/[^a-zA-Z0-9._-]/g, '_');
     const decodedContent = decodeURIComponent(htmlContent);
     const decodedAnnexes = annexes.map(annex => decodeURIComponent(annex));
     const decodedOfferLetter = offerLetter ? decodeURIComponent(offerLetter) : null;
@@ -325,7 +327,7 @@ app.post('/generate-pdf', async (req, res) => {
     // Stream the saved file as the response
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Length', stats.size); // Use actual file size
-    res.setHeader('Content-Disposition', 'attachment; filename="output.pdf"');
+    res.setHeader('Content-Disposition', `attachment; filename="${safeFileName}"`);
 
     const fileStream = createReadStream(debugFilePath);
     fileStream.pipe(res);
