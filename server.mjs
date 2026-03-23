@@ -28,7 +28,7 @@ const staticTableStyles = `
         border-collapse: collapse;
         margin: 0;
         border: 1px solid #ddd;
-        page-break-inside: auto; /* Ensure tables are not split across pages */
+        page-break-inside: auto; /* Allow splitting */
     }
     th, td {
         border: 1px solid #ddd;
@@ -53,6 +53,12 @@ const staticTableStyles = `
         color: #333;
         border-bottom: 2px solid #333;
     }
+    thead {
+          display: table-header-group;
+    }
+    tr {
+      page-break-inside: avoid;
+    }
     body {
         padding: 20px;
         box-sizing: border-box;
@@ -68,7 +74,8 @@ const staticTableStyles = `
     .signature-container {
         margin-top: 20px;
         margin-left: 0;
-        padding-left: 0;
+        padding-left: 40px;
+        padding-right: 40px;
     }
     .signature-table {
         width: 520px; /* Set table width */
