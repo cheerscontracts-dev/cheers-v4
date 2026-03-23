@@ -284,10 +284,10 @@ app.post('/generate-pdf', async (req, res) => {
       format: 'A4',
       printBackground: true,
       margin: {
-        top: '0.5in',
-        right: '0.5in',
-        bottom: '0.5in',
-        left: '0.5in',
+        top: '8px',
+        right: '8px',
+        bottom: '8px',
+        left: '8px',
       }
     });
 
