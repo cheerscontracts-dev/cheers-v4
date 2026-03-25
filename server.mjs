@@ -60,6 +60,7 @@ const staticTableStyles = `
       page-break-inside: avoid;
     }
     body {
+        position: relative;
         box-sizing: border-box;
         margin: 20px;
     }
@@ -289,10 +290,10 @@ app.post('/generate-pdf', async (req, res) => {
       format: 'A4',
       printBackground: true,
       margin: {
-        top: '8px',
-        right: '8px',
-        bottom: '8px',
-        left: '8px',
+        top: '0px',
+        right: '0px',
+        bottom: '0px',
+        left: '0px',
       }
     });
 
