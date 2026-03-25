@@ -297,7 +297,7 @@ app.post('/generate-pdf', async (req, res) => {
       margin: {
         top: '0px',
         right: '8px',
-        bottom: '40px',
+        bottom: '80px',
         left: '8px',
       }
     });
