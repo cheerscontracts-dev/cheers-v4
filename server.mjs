@@ -25,7 +25,7 @@ const staticTableStyles = `
     }
     @page {
         margin-top: 40px;
-        margin-bottom: 16px;
+        margin-bottom: 40px;
     }
 
     @page :first {
@@ -296,17 +296,10 @@ app.post('/generate-pdf', async (req, res) => {
     const mainPdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
-      displayHeaderFooter: true,
-      headerTemplate: '<span></span>',
-      footerTemplate: `
-        <div style="width: 100%; font-size: 10px; text-align: right; margin-right: 8px; margin-bottom 8px; color: #444; font-family: Arial, sans-serif;">
-          <span class="pageNumber"></span>/<span class="totalPages"></span>
-        </div>
-      `,
       margin: {
         top: '8px',
         right: '8px',
-        bottom: '40px',
+        bottom: '8px',
         left: '8px',
       }
     });
