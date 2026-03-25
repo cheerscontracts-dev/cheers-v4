@@ -17,15 +17,11 @@ app.use(bodyParser.json({ limit: '20mb' }));  // For application/json
 // Static styles for the table
 const staticTableStyles = `
 <style>
-    html {
+    html, body {
         margin: 0;
         padding: 0;
         width: 100%;
         height: 100%;
-    }
-
-    @page :first {
-        margin-top: 8px;
     }
     table {
         width: 100%;
@@ -64,12 +60,10 @@ const staticTableStyles = `
       page-break-inside: avoid;
     }
     body {
-        box-sizing: border-box;
         padding: 20px;
+        box-sizing: border-box;
         margin-right: 40px;
         margin-bottom: 20px;
-        width: 100%;
-        height: 100%;
     }
     /* Reset all borders for the signature section */
     .signature-container, .signature-table, .signature-table tr, .signature-table td, .signature-table th, .signature-table img, .signature-table div {
