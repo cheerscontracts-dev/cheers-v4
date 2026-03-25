@@ -65,6 +65,7 @@ const staticTableStyles = `
     }
     body {
         box-sizing: border-box;
+        padding: 40px;
     }
     /* Reset all borders for the signature section */
     .signature-container, .signature-table, .signature-table tr, .signature-table td, .signature-table th, .signature-table img, .signature-table div {
