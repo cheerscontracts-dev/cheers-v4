@@ -61,11 +61,10 @@ const staticTableStyles = `
     }
     body {
         box-sizing: border-box;
-        margin-left: 40px;
         margin-right: 40px;
         margin-bottom: 20px;
         margin-top: 20px;
-        padding: 0;
+        padding: 20px;
         width: 100%;
         height: 100%;
     }
