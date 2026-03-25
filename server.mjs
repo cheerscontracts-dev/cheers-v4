@@ -24,7 +24,7 @@ const staticTableStyles = `
         height: 100%;
     }
     @page {
-        margin: 20px;
+        margin: 40px;
     }
 
     @page :first {
@@ -296,10 +296,10 @@ app.post('/generate-pdf', async (req, res) => {
       format: 'A4',
       printBackground: true,
       margin: {
-        top: '0px',
-        right: '0px',
-        bottom: '0px',
-        left: '0px',
+        top: '8px',
+        right: '8px',
+        bottom: '8px',
+        left: '8px',
       }
     });
 
