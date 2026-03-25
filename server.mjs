@@ -295,7 +295,7 @@ app.post('/generate-pdf', async (req, res) => {
       format: 'A4',
       printBackground: true,
       margin: {
-        top: '8px',
+        top: '0px',
         right: '8px',
         bottom: '40px',
         left: '8px',
