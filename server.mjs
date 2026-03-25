@@ -65,6 +65,11 @@ const staticTableStyles = `
     }
     body {
         box-sizing: border-box;
+        padding: 20px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 100%;
     }
     /* Reset all borders for the signature section */
     .signature-container, .signature-table, .signature-table tr, .signature-table td, .signature-table th, .signature-table img, .signature-table div {
@@ -292,10 +297,10 @@ app.post('/generate-pdf', async (req, res) => {
       format: 'A4',
       printBackground: true,
       margin: {
-        top: '48px',
-        right: '48px',
-        bottom: '48px',
-        left: '48px',
+        top: '8px',
+        right: '8px',
+        bottom: '8px',
+        left: '8px',
       }
     });
 
