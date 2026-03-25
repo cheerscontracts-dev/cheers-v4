@@ -25,7 +25,6 @@ const staticTableStyles = `
     }
     @page {
         margin-top: 40px;
-        margin-bottom: 60px;
     }
 
     @page :first {
@@ -298,7 +297,7 @@ app.post('/generate-pdf', async (req, res) => {
       margin: {
         top: '8px',
         right: '8px',
-        bottom: '0px',
+        bottom: '40px',
         left: '8px',
       }
     });
