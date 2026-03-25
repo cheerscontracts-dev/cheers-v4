@@ -299,7 +299,7 @@ app.post('/generate-pdf', async (req, res) => {
       displayHeaderFooter: true,
       headerTemplate: '<span></span>',
       footerTemplate: `
-        <div style="width: 100%; font-size: 10px; text-align: center; color: #666; font-family: Arial, sans-serif;">
+        <div style="width: 100%; font-size: 10px; text-align: left; color: #444; font-family: Arial, sans-serif;">
           <span class="pageNumber"></span>/<span class="totalPages"></span>
         </div>
       `,
