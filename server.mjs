@@ -29,7 +29,7 @@ const staticTableStyles = `
     }
 
     @page :first {
-        margin-top: 8px;  /* let logo sit flush on first page */
+        margin-top: 0px;  /* let logo sit flush on first page */
     }
     table {
         width: 100%;
