@@ -288,10 +288,10 @@ app.post('/generate-pdf', async (req, res) => {
       format: 'A4',
       printBackground: true,
       margin: {
-        top: '8px',
-        right: '8px',
-        bottom: '8px',
-        left: '8px',
+        top: '40px',
+        right: '40px',
+        bottom: '40px',
+        left: '40px',
       }
     });
 
