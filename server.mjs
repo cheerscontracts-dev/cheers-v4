@@ -25,7 +25,7 @@ const staticTableStyles = `
     }
     @page {
         margin-top: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 55px;
     }
 
     @page :first {
