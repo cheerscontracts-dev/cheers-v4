@@ -23,6 +23,13 @@ const staticTableStyles = `
         width: 100%;
         height: 100%;
     }
+    @page {
+        margin: 20px;
+    }
+
+    @page :first {
+        margin-top: 0px;  /* let logo sit flush on first page */
+    }
     table {
         width: 100%;
         border-collapse: collapse;
@@ -60,9 +67,8 @@ const staticTableStyles = `
       page-break-inside: avoid;
     }
     body {
-        position: relative;
         box-sizing: border-box;
-        margin: 20px;
+        margin: 0px;
     }
     /* Reset all borders for the signature section */
     .signature-container, .signature-table, .signature-table tr, .signature-table td, .signature-table th, .signature-table img, .signature-table div {
