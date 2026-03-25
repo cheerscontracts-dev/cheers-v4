@@ -60,10 +60,7 @@ const staticTableStyles = `
       page-break-inside: avoid;
     }
     body {
-        padding: 20px;
         box-sizing: border-box;
-        margin-right: 40px;
-        margin-bottom: 20px;
     }
     /* Reset all borders for the signature section */
     .signature-container, .signature-table, .signature-table tr, .signature-table td, .signature-table th, .signature-table img, .signature-table div {
