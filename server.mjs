@@ -292,7 +292,7 @@ app.post('/generate-pdf', async (req, res) => {
       footerTemplate: `
         <div style="
           width: 100%;
-          font-size: 10px;
+          font-size: 8px;
           color: #333;
           text-align: right;
           padding-right: 16px;
