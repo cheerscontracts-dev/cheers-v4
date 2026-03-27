@@ -287,6 +287,19 @@ app.post('/generate-pdf', async (req, res) => {
     const mainPdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
+      displayHeaderFooter: true,
+      headerTemplate: '<div style="font-size: 0;"></div>',
+      footerTemplate: `
+        <div style="
+          width: 100%;
+          font-size: 10px;
+          color: #333;
+          text-align: right;
+          box-sizing: border-box;
+        ">
+          <span class="pageNumber"></span>/<span class="totalPages"></span>
+        </div>
+      `,
       margin: {
         top: '40px',
         right: '16px',
