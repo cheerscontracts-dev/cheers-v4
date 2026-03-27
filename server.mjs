@@ -287,7 +287,7 @@ app.post('/generate-pdf', async (req, res) => {
     const mainPdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
-      displayHeaderFooter: true,
+      displayHeaderFooter: type !== 'offer letter',
       headerTemplate: '<div style="font-size: 0;"></div>',
       footerTemplate: `
         <div style="
