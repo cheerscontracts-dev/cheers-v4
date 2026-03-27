@@ -106,7 +106,7 @@ const generateSignatureHTML = async (signer) => {
   return `
     <div class="signature-block">
       <img src="${signer.image}" alt="${signer.text}">
-      <div style="margin-top: 10px;">
+      <div style="margin-top: 2px;">
         <p>${signer.text}</p>
       </div>
     </div>
