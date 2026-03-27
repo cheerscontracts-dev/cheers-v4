@@ -295,6 +295,7 @@ app.post('/generate-pdf', async (req, res) => {
           font-size: 10px;
           color: #333;
           text-align: right;
+          padding-right: 16px;
           box-sizing: border-box;
         ">
           <span class="pageNumber"></span>/<span class="totalPages"></span>
